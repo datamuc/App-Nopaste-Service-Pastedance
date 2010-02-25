@@ -2,7 +2,6 @@ package App::Nopaste::Service::Pastedance;
 
 use warnings;
 use strict;
-use Scalar::Util 'blessed';
 use Encode;
 
 our $VERSION = '0.01';
