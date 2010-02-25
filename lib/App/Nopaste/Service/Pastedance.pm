@@ -3,6 +3,7 @@ package App::Nopaste::Service::Pastedance;
 use warnings;
 use strict;
 use Scalar::Util 'blessed';
+use Encode;
 
 our $VERSION = '0.01';
 
@@ -16,8 +17,8 @@ sub fill_form {
     my %args = @_;
 
     my $content = {
-        code    => $args{text},
-        subject => $args{desc},
+        code    => decode('UTF-8', $args{text}),
+        subject => decode('UTF-8', $args{desc}),
         lang    => exists( $self->FORMATS->{ $args{lang} } )
           ? $self->FORMATS->{ $args{lang} }
           : 'txt',
