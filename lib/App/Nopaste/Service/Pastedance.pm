@@ -23,7 +23,6 @@ sub fill_form {
           : 'txt',
     };
 
-    $mech->agent_alias('Linux Mozilla');
     my $form = $mech->form_number(1) || return;
 
     # do not follow redirect please
