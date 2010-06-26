@@ -17,7 +17,7 @@ my $builder = Module::Build->new(
     add_to_cleanup      => [ 'App-Nopaste-*' ],
     meta_merge => {
         resources => {
-            #repository => 'http://github.com/datamuc/WWW-Shorten-URLchen',
+            repository => 'http://github.com/datamuc/App-Nopaste-Service-Pastedance',
         },
     },
 );
