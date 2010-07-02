@@ -10,7 +10,6 @@ use base q[App::Nopaste::Service];
 
 sub uri { $ENV{PASTEDANCE_URL} || 'http://pb.rbfh.de/' }
 
-
 sub fill_form {
     my ($self, $mech) = (shift, shift);
     my %args = @_;
@@ -47,5 +46,20 @@ sub return {
     }
 }
 
-
+1;
 __END__
+
+=head1 NAME
+
+App::Nopaste::Service::Pastedance - paste to any Pastedance instance
+
+=head1 SYNOPSIS
+
+ cat << "EOS" > ~/bin/pd
+ #!/usr/bin/env perl
+ 
+ export PASTEDANCE_URL= # if unset it defaults to http://pb.rbfh.de/
+ exec nopaste -S pastedance "$@"
+ EOS
+
+=cut
