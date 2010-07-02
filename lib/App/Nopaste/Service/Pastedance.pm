@@ -4,7 +4,7 @@ use warnings;
 use strict;
 use Encode;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use base q[App::Nopaste::Service];
 
@@ -59,7 +59,7 @@ App::Nopaste::Service::Pastedance - paste to any Pastedance instance
  #!/usr/bin/env perl
  
  export PASTEDANCE_URL= # if unset it defaults to http://pb.rbfh.de/
- exec nopaste -S pastedance "$@"
+ exec nopaste -s Pastedance "$@"
  EOS
 
 =cut
